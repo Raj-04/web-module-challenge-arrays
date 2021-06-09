@@ -45,11 +45,10 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
-}    
-
-
+function copy(array){
+    const arraycopy = [...array];   
+return arraycopy;
+}
 
 
 
@@ -64,9 +63,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
-}
+function is31Flavors(array, string){
+    if(array.length === 31) {
+        return true;
+    }else{
+        return false;
+    }
+};
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -81,8 +84,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(array, string){
+   array.unshift(string);
+   return array;
 }
 
 
@@ -98,12 +102,8 @@ Use the removeLastFlavor function below to do the following:
 */
 
 function removeLastFlavor(array, string){
-   for(let i = 0; i < array.length; i++){
-       if(array[i] === string){
-           array.pop(i, 1);
-       }
-   }
-   return array;
+    array.pop(string);
+    return array;
 }
 
 
@@ -120,16 +120,8 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(array, number){
-  for(let i = 0; i < array.length; i++){
-    if(array[i] === (number)){
-    }
-  }
-  return originalFlavors;
+
 }
-
-console.log(getFlavorByIndex(originalFlavors, 2));
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
 as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that single flavor from the array.  
